@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ArGa Portalı - Yazılar Listesi</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+    <h1>Welcome to ArGa Portal - Yazılarımız</h1>
+
+    <ul>
+        {% for article in articles %}
+            <li>
+                <h2><a href="/articles/{{ article.pk }}/">{{ article.title }}</a></h2>
+                <p>By {{ article.author }} - Published on {{ article.publication_date }}</p>
+                <p>{{ article.content }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Add more HTML elements and styling here as desired -->
+
+</body>
+</html>

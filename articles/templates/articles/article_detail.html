@@ -1,0 +1,22 @@
+
+<!-- article_detail.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pink Dragon Gazette - Article Detail</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+    <div class="article-details">
+        <h1>{{ article.title }}</h1>
+        <p>Author: {{ article.author }}</p>
+        <p>Publication Date: {{ article.pub_date }}</p>
+        <hr>
+        <div class="content">
+            {{ article.content }}
+        </div>
+    </div>
+</body>
+</html>
