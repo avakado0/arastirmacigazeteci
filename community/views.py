@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Topic
+from django.db import models
 
 def community_home(request):
     # Add your home view logic here
